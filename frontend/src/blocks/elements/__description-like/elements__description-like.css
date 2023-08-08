@@ -1,0 +1,10 @@
+.elements__description-like {
+  background-color: #fff;
+  color: #000;
+  margin: 0;
+  padding: 25px 21px 25px 21px;
+  border-radius: 0 0 10px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+}

@@ -1,0 +1,7 @@
+.header__email-sign-out-button-container {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  font-size: 18px;
+  line-height: 22px;
+}

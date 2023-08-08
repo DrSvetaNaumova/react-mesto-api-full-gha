@@ -1,0 +1,21 @@
+.login__button {
+    margin-top: 168px;
+    padding: 14px 0;
+    width: 100%;
+    background-color: #fff;
+    color: #000;
+    border: 0;
+    border-radius: 2px;
+    font-size: 18px;
+    line-height: 21.78px;
+    font-weight: 400;
+    cursor: pointer;
+  }
+  
+  /* @media screen and (max-width: 767px) {
+    .login__button {
+      padding: 14.5px 0;
+      font-size: 14px;
+      line-height: 17px;
+    }
+  } */

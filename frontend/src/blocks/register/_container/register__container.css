@@ -1,0 +1,18 @@
+.register__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    background-color: #000;
+    width: 358px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    border-radius: 10px;
+    position: relative;
+  }
+  
+  @media screen and (max-width: 767px) {
+    .register__container {
+      width: 260px;
+    }
+  }

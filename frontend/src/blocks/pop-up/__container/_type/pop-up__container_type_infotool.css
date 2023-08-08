@@ -1,0 +1,12 @@
+.pop-up__container_type_infotool {
+    height: 330px;  
+    padding: 0; 
+    align-items: center; 
+    z-index: 0;
+  }
+
+  @media screen and (max-width: 767px) {
+    .pop-up__container_type_infotool {
+      height: 308px;
+    }
+  }

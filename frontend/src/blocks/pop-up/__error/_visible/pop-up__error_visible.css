@@ -1,0 +1,9 @@
+.pop-up__error_visible {
+  display: inline-block;
+  min-height: 30px;
+  padding-top: 4px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: #ff0000;
+}

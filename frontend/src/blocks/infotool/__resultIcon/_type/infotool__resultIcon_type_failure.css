@@ -1,0 +1,12 @@
+.infotool__resultIcon_type_failure {
+    width: 120px;
+    height: 120px;
+    color: #fff;
+    background-image: url('../../../../images/Union_failure.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #fff;
+    background-size: contain;
+    padding-bottom: 32px;
+    margin: 0;
+  }
