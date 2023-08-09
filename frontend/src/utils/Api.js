@@ -135,7 +135,8 @@ class Api {
 
 const api = new Api({
   // baseUrl: 'https://mesto.nomoreparties.co/v1/cohort-65',
-  baseUrl: 'http://localhost:3000',
+  // baseUrl: 'http://localhost:3000',
+  baseUrl: 'https://drsvetanaumova.nomoreparties.co',
   headers: {
     // authorization: 'e5c7629d-174e-499d-9501-41f48afec7e6',
     'Content-Type': 'application/json',
