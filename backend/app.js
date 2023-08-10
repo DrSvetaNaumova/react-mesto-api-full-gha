@@ -1,6 +1,10 @@
 const express = require('express');
 
+const cors = require('cors');
+
 require('dotenv').config();
+
+const { NODE_ENV, JWT_SECRET } = process.env;
 
 console.log(process.env.NODE_ENV);
 
@@ -8,7 +12,7 @@ console.log(process.env.NODE_ENV);
 
 const app = express();
 
-const cors = require('cors');
+// const cors = require('cors');
 
 const mongoose = require('mongoose');
 
@@ -36,6 +40,6 @@ app.use(errors());
 
 app.use(logErrors, errorHandler);
 
-app.listen(PORT, () => {
-  console.log(`App is running on port ${PORT}`);
-});
+// app.listen(PORT, () => {
+//   console.log(`App is running on port ${PORT}`);
+// });
