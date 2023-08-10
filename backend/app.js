@@ -1,8 +1,8 @@
 const express = require('express');
 
-require('dotenv').config();
+// require('dotenv').config();
 
-console.log(process.env.NODE_ENV);
+// console.log(process.env.NODE_ENV);
 
 const { PORT = 3000 } = process.env;
 
