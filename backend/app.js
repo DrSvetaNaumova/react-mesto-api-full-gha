@@ -1,5 +1,7 @@
 const express = require('express');
 
+require('dotenv').config();
+
 const { PORT = 3000 } = process.env;
 
 const app = express();
@@ -20,7 +22,7 @@ const router = require('./routes/index');
 
 app.use(express.json());
 
-app.use(cors({ origin: ['http://localhost:3001', 'http://localhost:3000', 'https://drsvetanaumova.nomoreparties.co', 'http://drsvetanaumova.nomoreparties.co'] }));
+app.use(cors({ origin: ['https://drsvetanaumova.nomoreparties.co', 'http://drsvetanaumova.nomoreparties.co'] }));
 
 app.use(requestLogger);
 
