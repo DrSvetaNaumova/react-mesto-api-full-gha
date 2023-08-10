@@ -24,7 +24,7 @@ const router = require('./routes/index');
 
 app.use(express.json());
 
-app.use(cors({ origin: ['http://localhost:3000', 'http://localhost:3001', 'https://drsvetanaumova.nomoreparties.co', 'http://drsvetanaumova.nomoreparties.co'] }));
+app.use(cors({ origin: ['https://drsvetanaumova.nomoreparties.co', 'http://drsvetanaumova.nomoreparties.co'] }));
 
 app.use(requestLogger);
 
