@@ -7,7 +7,7 @@
 
 ## Ссылки на проект
 
-IP-адрес 84.252.130.211
+IP 84.252.130.211
 
 Frontend https://drsvetanaumova.nomoreparties.co/
 

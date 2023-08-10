@@ -1,10 +1,10 @@
 const express = require('express');
 
-// require('dotenv').config();
+require('dotenv').config();
 
-// const { NODE_ENV, JWT_SECRET } = process.env;
+const { NODE_ENV, JWT_SECRET } = process.env;
 
-// console.log(process.env.NODE_ENV);
+console.log(process.env.NODE_ENV);
 
 const { PORT = 3000 } = process.env;
 
