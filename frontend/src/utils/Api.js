@@ -139,7 +139,7 @@ const api = new Api({
   baseUrl: 'https://api.drsvetanaumova.nomoreparties.co',
   headers: {
     // authorization: 'e5c7629d-174e-499d-9501-41f48afec7e6',
-    Accept: 'application/json', 'Content-Type': 'application/json',
+    'Content-Type': 'application/json',
   },
 });
 
