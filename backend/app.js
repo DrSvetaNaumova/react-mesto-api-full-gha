@@ -4,6 +4,10 @@ const cors = require('cors');
 
 require('dotenv').config();
 
+const { NODE_ENV, JWT_SECRET } = process.env;
+
+console.log(process.env.NODE_ENV);
+
 const { PORT = 3000 } = process.env;
 
 const app = express();
@@ -34,6 +38,6 @@ app.use(errors());
 
 app.use(logErrors, errorHandler);
 
-// app.listen(PORT, () => {
-//   console.log(`App is running on port ${PORT}`);
-// });
+app.listen(PORT, () => {
+  console.log(`App is running on port ${PORT}`);
+});
