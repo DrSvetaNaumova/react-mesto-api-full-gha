@@ -4,6 +4,12 @@ const router = express.Router();
 
 const auth = require('../middlewares/auth');
 
+router.get('/crash-test', () => {
+  setTimeout(() => {
+    throw new Error('Сервер сейчас упадёт');
+  }, 0);
+});
+
 router.post('/signup', require('./signup'));
 router.post('/signin', require('./login'));
 
