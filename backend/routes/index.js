@@ -11,8 +11,8 @@ const auth = require('../middlewares/auth');
 //   }, 0);
 // });
 
-router.post('/signup', require('./signup'));
-router.post('/signin', require('./login'));
+router.post('/signup', require('./signup')); // NEW
+router.post('/signin', require('./login')); // NEW
 
 router.use(auth); // NEW
 

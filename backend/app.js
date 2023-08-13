@@ -14,6 +14,8 @@ mongoose.connect('mongodb://127.0.0.1:27017/mestodb');
 
 const { errors } = require('celebrate');
 
+const helmet = require('helmet');
+
 const { requestLogger, errorLogger } = require('./middlewares/logger');
 
 const { errorHandler, logErrors } = require('./middlewares/errors');
@@ -25,6 +27,8 @@ app.use(express.json());
 app.use(cors({ origin: ['https://drsvetanaumova.nomoreparties.co', 'http://drsvetanaumova.nomoreparties.co'] }));
 
 app.use(requestLogger);
+
+app.use(helmet());
 
 app.use(router);
 
