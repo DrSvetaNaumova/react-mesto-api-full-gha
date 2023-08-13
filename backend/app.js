@@ -24,11 +24,11 @@ const router = require('./routes/index');
 
 app.use(express.json());
 
+app.use(helmet());
+
 app.use(cors({ origin: ['https://drsvetanaumova.nomoreparties.co', 'http://drsvetanaumova.nomoreparties.co'] }));
 
 app.use(requestLogger);
-
-app.use(helmet({ crossOriginEmbedderPolicy: false }));
 
 app.use(router);
 
