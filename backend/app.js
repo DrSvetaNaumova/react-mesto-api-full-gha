@@ -24,7 +24,8 @@ const router = require('./routes/index');
 
 app.use(express.json());
 
-app.use(cors({ origin: ['https://drsvetanaumova.nomoreparties.co', 'http://drsvetanaumova.nomoreparties.co'] }));
+// app.use(cors({ origin: ['https://drsvetanaumova.nomoreparties.co', 'http://drsvetanaumova.nomoreparties.co'] }));
+app.use(cors());
 
 app.use(helmet({ crossOriginResourcePolicy: false, crossOriginEmbedderPolicy: false }));
 
