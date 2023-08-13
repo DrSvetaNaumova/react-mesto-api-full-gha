@@ -28,7 +28,7 @@ app.use(cors({ origin: ['https://drsvetanaumova.nomoreparties.co', 'http://drsve
 
 app.use(requestLogger);
 
-app.use(helmet());
+app.use(helmet({ crossOriginEmbedderPolicy: false }));
 
 app.use(router);
 
