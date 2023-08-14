@@ -4,7 +4,7 @@ const cors = require('cors');
 
 require('dotenv').config();
 
-const { PORT = 3000 } = process.env;
+const { PORT = 3000, NODE_ENV } = process.env;
 
 const app = express();
 
@@ -24,10 +24,22 @@ const router = require('./routes/index');
 
 app.use(express.json());
 
-// app.use(cors({ origin: ['https://drsvetanaumova.nomoreparties.co', 'http://drsvetanaumova.nomoreparties.co'] }));
-app.use(cors());
+if (NODE_ENV === 'production') {
+  app.use(
+    cors({
+      origin: [
+        'https://drsvetanaumova.nomoreparties.co',
+        'http://drsvetanaumova.nomoreparties.co',
+      ],
+    }),
+  );
+} else {
+  app.use(cors());
+}
 
-app.use(helmet({ crossOriginResourcePolicy: false, crossOriginEmbedderPolicy: false }));
+app.use(
+  helmet(),
+);
 
 app.use(requestLogger);
 

@@ -1,6 +1,11 @@
-// export const BASE_URL = 'https://auth.nomoreparties.co';
-// export const BASE_URL = 'http://localhost:3000';
-export const BASE_URL = 'https://api.drsvetanaumova.nomoreparties.co'
+const { NODE_ENV } = process.env;
+
+export let BASE_URL;
+if (NODE_ENV === 'production') {
+  BASE_URL = 'https://api.drsvetanaumova.nomoreparties.co';
+} else {
+  BASE_URL = 'http://localhost:3000';
+}
 
 export const register = (email, password) => {
   return fetch(`${BASE_URL}/signup`, {

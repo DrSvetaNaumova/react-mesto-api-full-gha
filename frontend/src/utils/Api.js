@@ -1,3 +1,12 @@
+const { NODE_ENV } = process.env;
+
+let BASE_URL;
+if (NODE_ENV === 'production') {
+  BASE_URL = 'https://api.drsvetanaumova.nomoreparties.co';
+} else {
+  BASE_URL = 'http://localhost:3000';
+}
+
 class Api {
   constructor(options) {
     this._baseUrl = options.baseUrl;
@@ -18,7 +27,7 @@ class Api {
       headers: {
         ...this._headers,
         Authorization: `Bearer ${token}`,
-      }
+      },
     })
       .then(this._checkResponse)
       .then((res) => res.json());
@@ -66,12 +75,12 @@ class Api {
       headers: {
         ...this._headers,
         Authorization: `Bearer ${token}`,
-      }
+      },
     })
       .then(this._checkResponse)
       .then((res) => res.json())
-      .then((data) => data.data)
-      
+      .then((data) => data.data);
+
     return promise;
   }
   //добавить новую карточку
@@ -89,7 +98,7 @@ class Api {
     })
       .then(this._checkResponse)
       .then((res) => res.json())
-      .then((data) => data.data)
+      .then((data) => data.data);
     return promise;
   }
   // удалить карточку (DELETE)
@@ -99,7 +108,7 @@ class Api {
       headers: {
         ...this._headers,
         Authorization: `Bearer ${token}`,
-      }
+      },
     }).then(this._checkResponse);
     return promise;
   }
@@ -111,7 +120,7 @@ class Api {
       headers: {
         ...this._headers,
         Authorization: `Bearer ${token}`,
-      }
+      },
     })
       .then(this._checkResponse)
       .then((res) => res.json());
@@ -125,7 +134,7 @@ class Api {
       headers: {
         ...this._headers,
         Authorization: `Bearer ${token}`,
-      }
+      },
     })
       .then(this._checkResponse)
       .then((res) => res.json());
@@ -134,9 +143,7 @@ class Api {
 }
 
 const api = new Api({
-  // baseUrl: 'https://mesto.nomoreparties.co/v1/cohort-65',
-  // baseUrl: 'http://localhost:3000',
-  baseUrl: 'https://api.drsvetanaumova.nomoreparties.co',
+  baseUrl: BASE_URL,
   headers: {
     // authorization: 'e5c7629d-174e-499d-9501-41f48afec7e6',
     'Content-Type': 'application/json',
